@@ -1,0 +1,19 @@
+# Compiled class files
+bin/
+*.class
+
+# IDE and editor files
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+# macOS
+*.swp
+*.swo
+*~
+
+# Windows
+Thumbs.db

@@ -23,13 +23,16 @@ This project implements efficient algorithms to:
 
 ```
 dsa-directed-graph-acyclicity/
-├── Main.java                 # Entry point with demo and file modes
-├── DirectedGraph.java        # Graph representation and operations
-├── AcyclicityChecker.java    # Core algorithms
-├── GraphParser.java          # File parsing utility
-└── benchmarks/
-    ├── acyclic/             # 40 acyclic test graphs
-    └── cyclic/              # 40 cyclic test graphs
+├── src/
+│   ├── Main.java                 # Entry point with demo and file modes
+│   ├── DirectedGraph.java        # Graph representation and operations
+│   ├── AcyclicityChecker.java    # Core algorithms
+│   └── GraphParser.java          # File parsing utility
+├── bin/                          # Compiled class files (.class)
+├── benchmarks/
+│   ├── acyclic/                  # 40 acyclic test graphs
+│   └── cyclic/                   # 40 cyclic test graphs
+└── README.md                     # This file
 ```
 
 ## Getting Started
@@ -37,20 +40,53 @@ dsa-directed-graph-acyclicity/
 ### Compilation
 
 ```bash
-javac DirectedGraph.java GraphParser.java AcyclicityChecker.java Main.java
+javac -d bin src/*.java
+```
+
+This compiles all Java files from `src/` and outputs `.class` files to `bin/`.
+
+#### Using Build Scripts (Easier!)
+
+**Windows**:
+```bash
+build.bat
+```
+
+**Linux/Mac**:
+```bash
+bash build.sh
+```
+
+#### Alternative (individual compilation):
+```bash
+cd src
+javac *.java
+cd ..
 ```
 
 ### Usage
 
 **Run with demo mode** (two built-in examples):
 ```bash
-java Main
+java -cp bin Main
 ```
 
 **Run on a benchmark file**:
 ```bash
-java Main benchmarks/acyclic/a_40_0.txt
-java Main benchmarks/cyclic/c_40_0.txt
+java -cp bin Main benchmarks/acyclic/a_40_0.txt
+java -cp bin Main benchmarks/cyclic/c_40_0.txt
+```
+
+#### Quick Start (Linux/Mac):
+```bash
+javac -d bin src/*.java
+java -cp bin Main
+```
+
+#### Quick Start (Windows PowerShell):
+```powershell
+javac -d bin src\*.java
+java -cp bin Main
 ```
 
 ### Example Output
@@ -170,6 +206,12 @@ Where `u` is the source vertex and `v` is the destination vertex.
 - **Module**: 5SENG003W Algorithms Coursework 2025/26
 - **Student ID**: 20240856
 - **Name**: Siddiha Rimzan
+
+## Build Files
+
+- **build.bat** - Windows build script (one-command compilation)
+- **build.sh** - Linux/Mac build script (one-command compilation)
+- **.gitignore** - Excludes compiled files and IDE configs from version control
 
 ---
 
