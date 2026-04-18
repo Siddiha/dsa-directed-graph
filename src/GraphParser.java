@@ -1,5 +1,5 @@
 // Student ID: 20240856
-// Name: Siddiha Rimzan
+// Name: Siddiha 
 // Module: 5SENG003W Algorithms Coursework 2025/26
 
 import java.io.BufferedReader;
