@@ -214,5 +214,3 @@ Where `u` is the source vertex and `v` is the destination vertex.
 - **.gitignore** - Excludes compiled files and IDE configs from version control
 
 ---
-
-**For questions or improvements**, review the inline documentation in each Java file.
